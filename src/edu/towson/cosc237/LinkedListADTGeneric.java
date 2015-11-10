@@ -30,27 +30,36 @@ public class LinkedListADTGeneric {
         } 
         System.out.println("\nTesting .insert. The original list is: "); 
         intList.print(); 
+       
         System.out.println("\nTesting .length. The length of the original list is: " + intList.length()); 
+        
         if (!intList.isEmptyList()) { 
             System.out.println("Testing .front. First element/original list: " + intList.front()); 
             System.out.println("Testing .back. Last element/original list: "  + intList.back()); 
         } 
+        
         tempList = (OrderedLinkedList<Integer>) intList.clone(); 
         System.out.println("Testing .clone. The copy list is: "); 
         tempList.print(); 
         System.out.println("\nTesting .length. The length of the copy list is: " + tempList.length()); 
+        
         System.out.print("Testing .search. Enter the number to search for/original list: "); 
         num = input.nextInt(); 
         if (intList.search(num)) 
             System.out.println(num + " found in original list."); 
         else 
             System.out.println(num + " is not in original list."); 
+        
+        /*
+        //uncomment this after you write the deleteNode method
         System.out.print("Testing .remove. Enter the number to be deleted from original list: "); 
         num = input.nextInt(); 
         intList.deleteNode(num); 
         System.out.print("After deleting " + num + " the original list is: "); 
         intList.print(); 
         System.out.println("\nThe length of of the original list is: " + intList.length()); 
+        */
+        
         //Create an iterator for intList. 
         OrderedLinkedList<Integer>.LinkedListIterator<Integer> intListIt = intList.iterator(); 
         System.out.println("Testing iterator -- remove second node from original list. "); 
@@ -58,6 +67,7 @@ public class LinkedListADTGeneric {
             intListIt.next(); 
         if (intListIt != null) 
             intListIt.remove(); 
+        
         System.out.println("The original list is: "); 
         intList.print(); 
         System.out.println("\nThe length of the original list is: " + intList.length()); 

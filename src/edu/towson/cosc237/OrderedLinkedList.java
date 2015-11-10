@@ -52,23 +52,23 @@ public class OrderedLinkedList<T> extends LinkedListClass<T> {
             trailCurrent = first; 
             current = first; 
             found = false; 
-            while (current != null && !found) {//search the list 
-                Comparable<T> temp = (Comparable<T>) current.info; 
-                if (temp.compareTo(insertItem) >= 0) 
+            while (current != null && !found) {//search the list to find the right position of insertion
+                Comparable<T> temp = (Comparable<T>) current.info; //need to compare the item to be inserted to the data in each node
+                if (temp.compareTo(insertItem) >= 0) //found!
                    found = true; 
-                else { 
+                else { //move on to next node
                    trailCurrent = current; 
                    current = current.link; 
                 } 
             } 
-            //Case 2 
+            //Case 2 - inserting at the first position
             if (current == first) { 
                 newNode.link = first; 
                 first = newNode; 
                 count++; 
             } 
             
-            //Case 3 
+            //Case 3 - inserting in the middle
             else { 
                 trailCurrent.link = newNode; 
                 newNode.link = current; 
@@ -93,6 +93,23 @@ public class OrderedLinkedList<T> extends LinkedListClass<T> {
 
     @Override
     public void deleteNode(T deleteItem) { 
+        
+        
+        
+        
+        
+        
+        
+        //write your own code. Working code is below.   
+        
+        
+        
+        
+        
+        
+        
+        
+        /*
         LinkedListNode<T> current;      //variable to traverse the list 
         LinkedListNode<T> trailCurrent; //variable just before current 
         boolean found; 
@@ -140,6 +157,7 @@ public class OrderedLinkedList<T> extends LinkedListClass<T> {
                         System.out.println("Item to be deleted is not in the list."); 
             } 
         } 
+        */
     } 
 }
 
