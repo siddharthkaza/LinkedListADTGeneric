@@ -18,6 +18,22 @@ public class LinkedListADTGeneric {
      */
     public static void main(String[] args) throws CloneNotSupportedException {
         
+        //for circular ordered linked list
+        OrderedCircularLinkedList<Integer> circIntList = new OrderedCircularLinkedList<Integer>();
+        
+        Integer num; 
+        System.out.println("Enter integers (999 to stop)"); 
+        num = input.nextInt(); 
+        while (!num.equals(999)) { 
+            circIntList.insert((Integer) num); 
+            num = input.nextInt(); 
+        } 
+        System.out.println("\nTesting .insert. The original list is: "); 
+        circIntList.print(); 
+        
+        
+        
+        /*
         //for ordered Linked List
         OrderedLinkedList<Integer> intList = new OrderedLinkedList<Integer>(); 
         OrderedLinkedList tempList; 
@@ -50,15 +66,15 @@ public class LinkedListADTGeneric {
         else 
             System.out.println(num + " is not in original list."); 
         
-        /*
+ 
         //uncomment this after you write the deleteNode method
-        System.out.print("Testing .remove. Enter the number to be deleted from original list: "); 
-        num = input.nextInt(); 
-        intList.deleteNode(num); 
-        System.out.print("After deleting " + num + " the original list is: "); 
-        intList.print(); 
-        System.out.println("\nThe length of of the original list is: " + intList.length()); 
-        */
+        //System.out.print("Testing .remove. Enter the number to be deleted from original list: "); 
+        //num = input.nextInt(); 
+        //intList.deleteNode(num); 
+        //System.out.print("After deleting " + num + " the original list is: "); 
+        //intList.print(); 
+        //System.out.println("\nThe length of of the original list is: " + intList.length()); 
+ 
         
         //Create an iterator for intList. 
         OrderedLinkedList<Integer>.LinkedListIterator<Integer> intListIt = intList.iterator(); 
@@ -74,6 +90,8 @@ public class LinkedListADTGeneric {
         System.out.println("The copy list is: "); 
         tempList.print(); 
         System.out.println("\nThe length of the copy list is: " + tempList.length()); 
+        
+        */
     }
     
 }
