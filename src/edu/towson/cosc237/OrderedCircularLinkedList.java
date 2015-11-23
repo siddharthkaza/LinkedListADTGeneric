@@ -98,6 +98,7 @@ public class OrderedCircularLinkedList<T> extends LinkedListClass<T> {
                 newNode.link = first; 
                 first = newNode; 
                 count++; 
+                last.link = newNode;
             } else
             
             //inserting at the last position
